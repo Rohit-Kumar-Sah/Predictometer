@@ -1,0 +1,10 @@
+<div class="box {{result}}">
+<div class="h2 ml-4">The Result</div>
+<div  *ngIf="theValueEntered">
+<p class="ml-4">We Predicted : <span>{{computerPrediction}}</span></p> 
+<div class="h4 text-success ml-4" *ngIf="correct">Congo you Won !!!</div>
+<div class="h4 text-warning ml-4" *ngIf="!correct">Oops! you Lost !!!</div>
+<button class="btn-warning ml-5" (click)="reload()"  *ngIf="!correct" >Try Again</button>
+<button class="btn-success ml-5" (click)="reload()"  *ngIf="correct" >Win Again</button>
+</div>
+</div>
